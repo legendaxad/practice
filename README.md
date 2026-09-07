@@ -2,6 +2,8 @@
 
 Learning GIT and Python Foundation
 
+## GIT COMMANDS
+
 ```
 git config --global user.name
 git config --global user.name "your_name"
@@ -16,3 +18,14 @@ git remote add origin https://github_address
 git push origin master
 git pull origin master
 ```
+
+## Python Foundation
+
+- Primitive Variables
+- Function
+- Objects
+- Class
+- Class deep dive
+- Operations & Conditions
+- Loops
+- ...

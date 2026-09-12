@@ -38,3 +38,21 @@
 
 
 print("======boolean======")
+
+# Functions>print(),len(),input(),type()
+
+# y = input("Give your value:")
+# print(y)
+# result = y.isnumeric()
+# print(f"the input value is numeric:{result}")
+
+
+# Truhty va Falsy value
+
+# Truhty>true>100,-100,"as",
+# Falsy>False>0,"",None
+
+test_falsy = "" or None or False or 0
+print(bool(test_falsy))
+test_truthy = "" or False or 1
+print(bool(test_truthy))

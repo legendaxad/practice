@@ -46,3 +46,16 @@
 
 # result4 = give_greet(name="John")
 # print("result4:", result4)
+
+print("===== SCOPE =====")
+
+b = 1000  # 3 step
+
+
+def calculate(a, b):  # 2 step
+    c = a*b  # 1 step
+    print(f"c value:{c}")
+
+
+# CALL
+calculate(5, 50)

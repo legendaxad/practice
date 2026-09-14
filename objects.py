@@ -7,7 +7,7 @@
 '''
 import array
 import math
-print("==== What is object ====")
+# print("==== What is object ====")
 # An object has state and method properties
 # Everything is object in Python
 
@@ -23,3 +23,26 @@ print("==== What is object ====")
 # print(result1)
 # result2 = math.ceil(98.2)
 # print(result2)
+
+
+print("==== Error handling system ====")
+
+
+car_dic = dict(name="Tayota", year=2026, electric=True)
+
+
+try:
+    print("passed here")
+    a = car_dic.speed()
+    result = car_dic["name"]
+    print("result", result)
+
+
+except KeyError as err:
+    print("No origin state property found:", err)
+except AttributeError as err:
+    print("No speed state  found:", err)
+else:
+    print("executed without errors")
+finally:
+    print("Final closing logec")

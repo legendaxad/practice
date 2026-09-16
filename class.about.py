@@ -51,3 +51,46 @@ print(new_message)
 # static methods
 
 Person.explain()
+
+
+print("==== Special methods ====")
+# Python's most common special methods are below:
+# __init__,__newt__,__str__,__call__,__getitem__,__eq__,
+
+
+class Car():
+    # state
+    description = "This class makes cars"
+    # constructor
+
+    def __new__(cls, *args):
+        print("*__new__*")
+        return super().__new__(cls)
+
+    def __init__(self, name, year):
+        self.name = name,
+        self.year = year
+
+    # method
+    def start_engine(self):
+        print(f"the {self.name} started engine!")
+
+    def stop_engine(self):
+        print(f"the {self.name} stopped engine!")
+
+    def __str__(self):
+        return f"the car.name:{self.name} was produced in {self.year} year!"
+
+    def __call__(self, *args, **kwds):
+        print("Object called as function")
+        return True
+
+
+my_car = Car("ferrari", 2002)
+my_car.start_engine()
+my_car.stop_engine()
+print(my_car.name)
+your_car = Car("Toyoto", 2003)
+print(your_car)
+response = your_car()
+print("response:", response)

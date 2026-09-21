@@ -18,12 +18,42 @@ print("===== Whta is tuple : tuple vs list =====")
 # person_dic = dict(name="Kyle", age=22)
 # print(letters)
 
-fruits = ["apple", "lemon", "banana", "melon"]
-print(fruits)
-fruits[0] = "kiwi"
-print(fruits)
+# fruits = ["apple", "lemon", "banana", "melon"]
+# print(fruits)
+# fruits[0] = "kiwi"
+# print(fruits)
 
 
-animal = ("dog", "cat", "fish", "lion")
-tuple_obj = ("Mit", 100, True, None)
-print(animal[2])
+# animal = ("dog", "cat", "fish", "lion")
+# tuple_obj = ("Mit", 100, True, None)
+# print(animal[2])
+
+
+#  Try avoid this
+
+# people = "Andrew", "John"
+# animal = "Dog",
+
+# print(type(animal))
+
+print("===== unpacking argiments =====")
+
+groups = ["MIT", "FLEX", "DEVEX", "MG"]
+
+# (x, y, *z) = groups
+# print(f"x:{x},y:{y},z {z}")
+
+
+#  *args > tuple
+
+def calculate(*args):
+    print(f"args:{args}")
+    total = 1
+    for x in args:
+        total *= x
+    print(f"the type(args):{type(args)}")
+    print(f"Total value :{total}")
+    return total
+
+
+calculate(1, 4, 2)

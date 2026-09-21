@@ -46,35 +46,44 @@ groups = ["MIT", "FLEX", "DEVEX", "MG"]
 
 #  *args > tuple
 
-def calculate(*args):
-    print(f"args:{args}")
-    total = 1
-    for x in args:
-        total *= x
-    print(f"the type(args):{type(args)}")
-    print(f"Total value :{total}")
-    return total
+# def calculate(*args):
+#     print(f"args:{args}")
+#     total = 1
+#     for x in args:
+#         total *= x
+#     print(f"the type(args):{type(args)}")
+#     print(f"Total value :{total}")
+#     return total
 
 
-calculate(1, 4, 2)
+# calculate(1, 4, 2)
 
-# **kwargs >dictionary
-
-
-def introduce(**kwargs):
-    print(f"the type(**kwargs) {type(kwargs)}")
-    print(f"Hi , I am {kwargs["name"]} and my age is {kwargs["age"]}")
-
-# call
+# # **kwargs >dictionary
 
 
-introduce(name="Justin", age=23)
-introduce(name="Kyle", age=22, single="True")
+# def introduce(**kwargs):
+#     print(f"the type(**kwargs) {type(kwargs)}")
+#     print(f"Hi , I am {kwargs["name"]} and my age is {kwargs["age"]}")
+
+# # call
 
 
-def greeting(*args, **kwargs):
-    print("args", args)
-    print("kwargs", kwargs)
+# introduce(name="Justin", age=23)
+# introduce(name="Kyle", age=22, single="True")
 
 
-greeting("Hi", True, 10, name="Kyle", age=22)
+# def greeting(*args, **kwargs):
+#     print("args", args)
+#     print("kwargs", kwargs)
+
+
+# greeting("Hi", True, 10, name="Kyle", age=22)
+
+
+print("===== zip =====")
+
+
+tuple1 = (1, 2, 3, 4)
+tuple2 = ("a", "b", "c", "d")
+zipped = zip(tuple1, tuple2)
+print("zipped:", list(zipped))
